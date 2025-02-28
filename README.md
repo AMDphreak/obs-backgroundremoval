@@ -129,7 +129,13 @@ $ flatpak install com.obsproject.Studio.Plugin.BackgroundRemoval
 
 ### Windows
 
-Use the CI scripts again, for example:
+1. Download the repository to your local computer.
+   - Download the repository as a zip file and unzip, or
+   - Install github command line and follow the following directions:
+     1. In Powershell or Terminal (running Powershell) run `git clone https://github.com/obs-backgroundremoval/obs-backgroundremoval.git`
+     2. then `cd obs-backgroundremoval`
+
+The scripts for building are in subdirectories. Use the CI (continuous integration) scripts to call the build script and change the options as necessary. Make sure you run the script while in the base folder. Example for x64:
 
 ```powershell
 > .github/scripts/Build-Windows.ps1 -Target x64 -CMakeGenerator "Visual Studio 17 2022"
